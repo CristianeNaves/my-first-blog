@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  app:
+    container_name: my_first_blog
+    environment:
+      - LANG=pt_BR.UTF-8
+      - LC_ALL=pt_BR.UTF-8
+    build: .
+    volumes: 
+      - ./:/my_first_blog
+    ports:
+      - 8000:8000
+    entrypoint: ["tail", "-f", "/dev/null"]
