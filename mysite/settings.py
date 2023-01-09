@@ -25,7 +25,7 @@ SECRET_KEY = '!pfh9kpv_6=-a(wi545&1i#v))4v+6mpz!1yhc!xp-g82cqve^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'cristianenaves.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'cristianenaves.pythonanywhere.com', 'localhost']
 
 
 # Application definition
@@ -40,13 +40,12 @@ INSTALLED_APPS = [
     'blog',
 ]
 
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -69,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mysite.wsgi.application'
+#WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
 # Database
